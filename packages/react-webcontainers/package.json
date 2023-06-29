@@ -1,0 +1,36 @@
+{
+  "name": "react-webcontainers",
+  "description": "Library for integrating WebContainers into React applications",
+  "version": "1.0.0",
+  "author": "Stephen Shkeda <stephenshkeda@gmail.com>",
+  "keywords": [
+    "react",
+    "webcontainers",
+    "@webcontainer/api",
+    "webcontainer",
+    "stackblitz",
+    "nodejs"
+  ],
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\"",
+    "generate:component": "turbo gen react-component",
+    "build": "tsup src/index.tsx --format esm --dts --external react",
+    "dev": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "react": "^17.0.2",
+    "tsconfig": "workspace:*",
+    "tsup": "^7.1.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@webcontainer/api": "^1.1.5"
+  }
+}
